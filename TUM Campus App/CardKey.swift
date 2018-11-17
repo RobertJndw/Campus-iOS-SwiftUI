@@ -22,6 +22,7 @@ import Foundation
 
 enum CardKey: Int, Codable {
     case tufilm
+    case event
     case calendar
     case news
     case newsspread
@@ -36,6 +37,8 @@ enum CardKey: Int, Codable {
         switch self {
         case .tufilm:
             return "TU Film"
+        case .event:
+            return "Events"
         case .calendar:
             return "Calendar"
         case .cafeteria:
@@ -57,7 +60,7 @@ enum CardKey: Int, Codable {
         }
     }
     
-    static var all: [CardKey] = [.tufilm, .calendar, .news, .cafeteria, .tuition,
+    static var all: [CardKey] = [.tufilm, .event, .calendar, .news, .cafeteria, .tuition,
                                  .mvg, .grades, .studyRooms, .lectures, .newsspread]
     
 }

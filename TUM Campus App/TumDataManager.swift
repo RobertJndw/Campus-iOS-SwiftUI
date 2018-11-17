@@ -12,6 +12,7 @@ class TumDataManager {
     
     lazy var calendarManager: CalendarManager = { CalendarManager(config: self.config) }()
     lazy var movieManager: MovieManager = { MovieManager(config: self.config) }()
+    lazy var eventManager: EventManager = { EventManager(config: self.config) }()
     lazy var newsManager: NewsManager = { NewsManager(config: self.config) }()
     lazy var tuitionManager: TuitionStatusManager = { TuitionStatusManager(config: self.config) }()
     //lazy var bookRentalManager: BookRentalManager = { BookRentalManager(config: self.config) }()
@@ -51,6 +52,7 @@ class TumDataManager {
         return [
             calendarManager,
             movieManager,
+            eventManager,
             tumNewsManager,
             newsSpreadManager,
             tuitionManager,

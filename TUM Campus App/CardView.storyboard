@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Av0-G7-ZLu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Av0-G7-ZLu">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="4144" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -620,6 +618,66 @@
                                             <outlet property="showAllButton" destination="q69-Aa-a5I" id="i5q-Se-WOq"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="EventsCard" id="FS0-Uy-l6M" customClass="DataSourceCollectionViewCell" customModule="Campus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="2000" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rVf-Ao-9cR">
+                                                    <rect key="frame" x="0.0" y="48" width="375" height="136"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eZR-EH-xEr">
+                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells/>
+                                                </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZw-Bn-dO9">
+                                                    <rect key="frame" x="20" y="16" width="335" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXh-sb-Cct">
+                                                    <rect key="frame" x="298" y="13" width="57" height="30"/>
+                                                    <state key="normal" title="Show all"/>
+                                                    <connections>
+                                                        <action selector="showAll" destination="FS0-Uy-l6M" eventType="touchUpInside" id="dKR-YE-3Q2"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="SZw-Bn-dO9" firstAttribute="leading" secondItem="FS0-Uy-l6M" secondAttribute="leading" constant="20" id="3og-rB-F80"/>
+                                            <constraint firstItem="SZw-Bn-dO9" firstAttribute="top" secondItem="FS0-Uy-l6M" secondAttribute="top" constant="16" id="5CB-vC-xEk"/>
+                                            <constraint firstItem="rVf-Ao-9cR" firstAttribute="top" secondItem="SZw-Bn-dO9" secondAttribute="bottom" constant="8" id="6Rs-SO-bSe"/>
+                                            <constraint firstItem="rVf-Ao-9cR" firstAttribute="leading" secondItem="FS0-Uy-l6M" secondAttribute="leading" id="6zI-cF-Ks1"/>
+                                            <constraint firstAttribute="trailing" secondItem="yXh-sb-Cct" secondAttribute="trailing" constant="20" id="9Fi-wt-DS6"/>
+                                            <constraint firstAttribute="trailing" secondItem="SZw-Bn-dO9" secondAttribute="trailing" constant="20" id="Paj-o1-w2D"/>
+                                            <constraint firstAttribute="trailing" secondItem="rVf-Ao-9cR" secondAttribute="trailing" id="bF4-9z-hzS"/>
+                                            <constraint firstAttribute="bottom" secondItem="rVf-Ao-9cR" secondAttribute="bottom" constant="16" id="f8d-1c-JA5"/>
+                                            <constraint firstItem="yXh-sb-Cct" firstAttribute="centerY" secondItem="SZw-Bn-dO9" secondAttribute="centerY" id="kJQ-Nh-rkm"/>
+                                        </constraints>
+                                        <size key="customSize" width="375" height="200"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topGradientColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomGradientColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="cardNameLabel" destination="SZw-Bn-dO9" id="70s-nE-4wj"/>
+                                            <outlet property="collectionView" destination="rVf-Ao-9cR" id="oNG-Dt-dWO"/>
+                                            <outlet property="showAllButton" destination="yXh-sb-Cct" id="UKJ-Wy-2B4"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
@@ -910,6 +968,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="contact" width="33" height="33"/>
+        <image name="contact" width="66" height="66"/>
     </resources>
 </document>

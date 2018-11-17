@@ -134,6 +134,11 @@
 		221E45C320A71A7300A92084 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221E45C120A71A7300A92084 /* MenuCollectionViewCell.swift */; };
 		221E45C420A71A7300A92084 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221E45C220A71A7300A92084 /* MenuCollectionViewCell.xib */; };
 		222E86151FBDDB44009AAFBA /* TUMLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E86141FBDDB44009AAFBA /* TUMLogoView.swift */; };
+		2259BB9F219F4CA400FECFFD /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259BB9E219F4CA400FECFFD /* EventManager.swift */; };
+		2259BBA1219F4D8F00FECFFD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259BBA0219F4D8F00FECFFD /* Event.swift */; };
+		2259BBA3219F7BD600FECFFD /* EventsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259BBA2219F7BD600FECFFD /* EventsDataSource.swift */; };
+		2259BBA8219F7C7100FECFFD /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259BBA7219F7C7100FECFFD /* EventCollectionViewCell.swift */; };
+		2259BBA9219F998700FECFFD /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2259BBA6219F7C7100FECFFD /* EventCollectionViewCell.xib */; };
 		22763FCB20ADBA21008D5A89 /* NewsSpreadDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22763FCA20ADBA21008D5A89 /* NewsSpreadDataSource.swift */; };
 		22763FCE20ADBE65008D5A89 /* NewsSpreadCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22763FCC20ADBE65008D5A89 /* NewsSpreadCollectionViewCell.swift */; };
 		22763FCF20ADBE65008D5A89 /* NewsSpreadCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22763FCD20ADBE65008D5A89 /* NewsSpreadCollectionViewCell.xib */; };
@@ -377,6 +382,11 @@
 		221E45C220A71A7300A92084 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		222E86141FBDDB44009AAFBA /* TUMLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUMLogoView.swift; sourceTree = "<group>"; };
 		222F90F91EB7BD69002F9289 /* Campus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Campus.entitlements; sourceTree = "<group>"; };
+		2259BB9E219F4CA400FECFFD /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		2259BBA0219F4D8F00FECFFD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		2259BBA2219F7BD600FECFFD /* EventsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDataSource.swift; sourceTree = "<group>"; };
+		2259BBA6219F7C7100FECFFD /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventCollectionViewCell.xib; path = "/Users/tim/Developer/iOS/TUM Campus App/CardCells/EventCollectionViewCell.xib"; sourceTree = "<absolute>"; };
+		2259BBA7219F7C7100FECFFD /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventCollectionViewCell.swift; path = "/Users/tim/Developer/iOS/TUM Campus App/CardCells/EventCollectionViewCell.swift"; sourceTree = "<absolute>"; };
 		22763FCA20ADBA21008D5A89 /* NewsSpreadDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSpreadDataSource.swift; sourceTree = "<group>"; };
 		22763FCC20ADBE65008D5A89 /* NewsSpreadCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsSpreadCollectionViewCell.swift; path = "TUM Campus App/NewsSpreadCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		22763FCD20ADBE65008D5A89 /* NewsSpreadCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = NewsSpreadCollectionViewCell.xib; path = "TUM Campus App/NewsSpreadCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
@@ -698,6 +708,7 @@
 				0EBC0DBF1C177FBE002D7A00 /* ImageDownloader.swift */,
 				22F4B6B31EA802960086D49A /* BookRental.swift */,
 				0ECD97121F9D8EC70070441D /* DefaultCampus.swift */,
+				2259BBA0219F4D8F00FECFFD /* Event.swift */,
 				807C48131F40918500CAD35D /* MVV */,
 				0E64AC681C0DFAD400060FB0 /* Managers */,
 				0E6F114D1FA27D1E00DB01EB /* SearchResultKey.swift */,
@@ -780,6 +791,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC10C1E1C171CFB0024F902 /* CafeteriaManager.swift */,
+				2259BB9E219F4CA400FECFFD /* EventManager.swift */,
 				0EC10C201C171D100024F902 /* MovieManager.swift */,
 				0EF4CEE51D414D39001649F1 /* NewsManager.swift */,
 				0E0C68271E8A4DC5007001F1 /* TumSexyManager.swift */,
@@ -922,6 +934,7 @@
 				220EFFA020A85BC6009D0337 /* MVGStationDataSource.swift */,
 				220EFFB320A8673F009D0337 /* MVGDepartureDataSource.swift */,
 				220EFFA420A85BD8009D0337 /* StudyRoomsDataSource.swift */,
+				2259BBA2219F7BD600FECFFD /* EventsDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -953,6 +966,8 @@
 				22C83C6520A9DDEF00AB556D /* MVGStationCollectionViewCell.xib */,
 				220EFFAF20A866EC009D0337 /* MVGDepartureCollectionViewCell.swift */,
 				220EFFB020A866EC009D0337 /* MVGDepartureCollectionViewCell.xib */,
+				2259BBA7219F7C7100FECFFD /* EventCollectionViewCell.swift */,
+				2259BBA6219F7C7100FECFFD /* EventCollectionViewCell.xib */,
 				227B481620A3472C00AE3373 /* TUMCollectionViewCell.swift */,
 				227B481820A3487700AE3373 /* DataSourceCollectionViewCell.swift */,
 				22763FD020B176CE008D5A89 /* RoundedLabel.swift */,
@@ -1250,6 +1265,7 @@
 				0ECD970F1F9D87D60070441D /* MVV.storyboard in Resources */,
 				2219FCC421728AF2002CA1BC /* DefaultCampus.storyboard in Resources */,
 				048B08FC21760AF30028348E /* DepartureView.xib in Resources */,
+				2259BBA9219F998700FECFFD /* EventCollectionViewCell.xib in Resources */,
 				221E45C420A71A7300A92084 /* MenuCollectionViewCell.xib in Resources */,
 				50200E121DF4948C00B6FBE3 /* Movie.storyboard in Resources */,
 				50200E101DF4941500B6FBE3 /* CardView.storyboard in Resources */,
@@ -1464,6 +1480,7 @@
 				807C48121F40917E00CAD35D /* Departure.swift in Sources */,
 				2219FCC621728C68002CA1BC /* DefaultCampusViewController.swift in Sources */,
 				5007C6A01E06788F0014B065 /* StudyRoomsManager.swift in Sources */,
+				2259BBA3219F7BD600FECFFD /* EventsDataSource.swift in Sources */,
 				0E2E33971E047BDB00E6F707 /* AppDefaults.swift in Sources */,
 				0E0EE9511D410E4E00E667A8 /* Extensions.swift in Sources */,
 				0E64AC671C0DFACD00060FB0 /* TumDataManager.swift in Sources */,
@@ -1475,6 +1492,7 @@
 				0E5A61DF1C135750006017DB /* User.swift in Sources */,
 				0E0C68241E8A4355007001F1 /* Usage.swift in Sources */,
 				22C83C6620A9DDEF00AB556D /* MVGStationCollectionViewCell.swift in Sources */,
+				2259BBA1219F4D8F00FECFFD /* Event.swift in Sources */,
 				9DE0FD5920E8089A009B75F9 /* VariableColumnsFlowLayoutDelegate.swift in Sources */,
 				220EFFA120A85BC6009D0337 /* MVGStationDataSource.swift in Sources */,
 				0E893EF81EB3D7DE0058027F /* TUMOnline.swift in Sources */,
@@ -1499,6 +1517,7 @@
 				9DE0FD5B20E808DB009B75F9 /* ColumnsFlowLayoutDelegate.swift in Sources */,
 				0EF3D5051FBB13A900D05DE0 /* RefreshableTableViewController.swift in Sources */,
 				220EFF9F20A85BB9009D0337 /* GradesDataSource.swift in Sources */,
+				2259BBA8219F7C7100FECFFD /* EventCollectionViewCell.swift in Sources */,
 				0E3B21441C13C1B60035ED70 /* Tuition.swift in Sources */,
 				227B481920A3487700AE3373 /* DataSourceCollectionViewCell.swift in Sources */,
 				0E64AC5F1C0DEC6F00060FB0 /* CalendarRowSet.swift in Sources */,
@@ -1535,6 +1554,7 @@
 				0EF4CEEC1D415D95001649F1 /* NewsTableViewController.swift in Sources */,
 				0EF4CEE81D414D40001649F1 /* News.swift in Sources */,
 				22763FD120B176CE008D5A89 /* RoundedLabel.swift in Sources */,
+				2259BB9F219F4CA400FECFFD /* EventManager.swift in Sources */,
 				227D2164209B347000C651BB /* TUFilmCollectionViewCell.swift in Sources */,
 				5007C6AA1E0693420014B065 /* StudyRoomsTableViewCell.swift in Sources */,
 				0EC10C231C171F730024F902 /* UserData.swift in Sources */,

@@ -90,6 +90,7 @@ class ComposedDataSource: NSObject, UICollectionViewDataSource, UICollectionView
             NewsSpreadDataSource(parent: parent, manager: manager.newsSpreadManager),
             CafeteriaDataSource(parent: parent, manager: manager.cafeteriaManager),
             TUFilmDataSource(parent: parent, manager: manager.tuFilmNewsManager),
+            EventsDataSource(parent: parent, manager: manager.eventManager),
             CalendarDataSource(parent: parent, manager: manager.calendarManager),
             TuitionDataSource(parent: parent, manager: manager.tuitionManager),
             MVGStationDataSource(parent: parent, manager: manager.mvgManager),

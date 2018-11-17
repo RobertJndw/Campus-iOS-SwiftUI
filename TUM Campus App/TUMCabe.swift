@@ -11,6 +11,14 @@ import Sweeft
 
 enum TUMCabeEndpoint: String, APIEndpoint {
     case movie = "kino/"
+    case eventList = "event/list/"
+    case myEvnents = "event/ticket/my/"
+    case ticketTypes = "event/ticket/type/{event}"
+    case ticketStats = "event/ticket/status/{event}/"
+    case ticketReservation = "event/ticket/reserve"
+    case ticketReservationCancellation = "event/ticket/reserve/cancel"
+    case ticketPurchase = "event/ticket/payment/stripe/purchase"
+    case stripeKey = "event/ticket/payment/stripe/ephemeralkey/"
     case cafeteria = "mensen/"
     case news = "news/{news}"
     case searchRooms = "roomfinder/room/search/{query}"
