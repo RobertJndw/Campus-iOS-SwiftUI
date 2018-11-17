@@ -134,6 +134,8 @@
 		221E45C320A71A7300A92084 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221E45C120A71A7300A92084 /* MenuCollectionViewCell.swift */; };
 		221E45C420A71A7300A92084 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221E45C220A71A7300A92084 /* MenuCollectionViewCell.xib */; };
 		222CF25E21A0A9460096EEC6 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CF25D21A0A9460096EEC6 /* EventCollectionViewCell.swift */; };
+		222CF26021A0A9850096EEC6 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CF25F21A0A9850096EEC6 /* EventTableViewController.swift */; };
+		222CF26221A0A9930096EEC6 /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222CF26121A0A9930096EEC6 /* Event.storyboard */; };
 		222E86151FBDDB44009AAFBA /* TUMLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E86141FBDDB44009AAFBA /* TUMLogoView.swift */; };
 		2259BB9F219F4CA400FECFFD /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259BB9E219F4CA400FECFFD /* EventManager.swift */; };
 		2259BBA1219F4D8F00FECFFD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259BBA0219F4D8F00FECFFD /* Event.swift */; };
@@ -387,6 +389,8 @@
 		221E45C220A71A7300A92084 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		222CF25C21A0A9460096EEC6 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventCollectionViewCell.xib; path = "/Users/tim/Developer/iOS/TUM Campus App/CardCells/EventCollectionViewCell.xib"; sourceTree = "<absolute>"; };
 		222CF25D21A0A9460096EEC6 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventCollectionViewCell.swift; path = "/Users/tim/Developer/iOS/TUM Campus App/CardCells/EventCollectionViewCell.swift"; sourceTree = "<absolute>"; };
+		222CF25F21A0A9850096EEC6 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		222CF26121A0A9930096EEC6 /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
 		222E86141FBDDB44009AAFBA /* TUMLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUMLogoView.swift; sourceTree = "<group>"; };
 		222F90F91EB7BD69002F9289 /* Campus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Campus.entitlements; sourceTree = "<group>"; };
 		2259BB9E219F4CA400FECFFD /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
@@ -935,6 +939,9 @@
 		227BB0BB219FC75800DBBE8D /* Event View */ = {
 			isa = PBXGroup;
 			children = (
+				227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */,
+				222CF25F21A0A9850096EEC6 /* EventTableViewController.swift */,
+				222CF26121A0A9930096EEC6 /* Event.storyboard */,
 			);
 			path = "Event View";
 			sourceTree = "<group>";
@@ -944,7 +951,6 @@
 			children = (
 				227BB0BD219FC7A500DBBE8D /* EventsTableViewController.swift */,
 				227BB0C5219FCAB500DBBE8D /* Events.storyboard */,
-				227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */,
 			);
 			path = "Events Detail View";
 			sourceTree = "<group>";
@@ -1312,6 +1318,7 @@
 				227B480920A3428100AE3373 /* TuitionCollectionViewCell.xib in Resources */,
 				50200E241DF498F400B6FBE3 /* News.storyboard in Resources */,
 				22C83C6720A9DDEF00AB556D /* MVGStationCollectionViewCell.xib in Resources */,
+				222CF26221A0A9930096EEC6 /* Event.storyboard in Resources */,
 				048B09022176664B0028348E /* MVGDepartureTableViewCell.xib in Resources */,
 				2297958C1EACB858004A7F9B /* LibrarySettingsView.storyboard in Resources */,
 				228DEAF820DB0DC600934F72 /* ErrorView.xib in Resources */,
@@ -1620,6 +1627,7 @@
 				221E45C020A4C21F00A92084 /* MenuDataSource.swift in Sources */,
 				0EB161861C1A0E6A001A08FC /* LecturesTableViewController.swift in Sources */,
 				0EC9D0221FBA52B200061DF1 /* TUFilmNewsManager.swift in Sources */,
+				222CF26021A0A9850096EEC6 /* EventTableViewController.swift in Sources */,
 				227D2168209B347F00C651BB /* CalendarCollectionViewCell.swift in Sources */,
 				0EB473CC1C1B495100F17F44 /* RoomFinderMapManager.swift in Sources */,
 				0E3B212C1C13AB250035ED70 /* DoneView.swift in Sources */,

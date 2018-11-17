@@ -16,8 +16,7 @@ class EventsDataSource: NSObject, TUMDataSource, TUMInteractiveDataSource {
     var isEmpty: Bool { return events.isEmpty }
     var cardKey: CardKey = .event
     var preferredHeight: CGFloat = 360.0
-    //         VariableColumnsFlowLayoutDelegate(aspectRatio: CGFloat(2.0/3.0), delegate: self)
-    lazy var flowLayoutDelegate: ColumnsFlowLayoutDelegate = FixedColumnsFlowLayoutDelegate()
+    lazy var flowLayoutDelegate: ColumnsFlowLayoutDelegate = FixedColumnsFlowLayoutDelegate(delegate: self)
     var events: [Event] = []
     
     init(parent: CardViewController, manager: EventManager) {
@@ -32,7 +31,7 @@ class EventsDataSource: NSObject, TUMDataSource, TUMInteractiveDataSource {
             self.events = data
             group.leave()
             }.onError { error in
-                print("error: \(error)")
+            print("error: \(error)")
         }
     }
     
@@ -52,6 +51,16 @@ class EventsDataSource: NSObject, TUMDataSource, TUMInteractiveDataSource {
         cell.imageView.image = event.image ?? UIImage(named: "movie")
         
         return cell
+    }
+    
+    @objc func onItemSelected(at indexPath: IndexPath) {
+        let event = events[indexPath.row]
+        let storyboard = UIStoryboard(name: "Event", bundle: nil)
+        if let destination = storyboard.instantiateInitialViewController() as? EventTableViewController {
+            destination.event = event
+            destination.delegate = parent
+            parent.navigationController?.pushViewController(destination, animated: true)
+        }
     }
     
     @objc func onShowMore() {

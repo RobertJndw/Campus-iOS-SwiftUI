@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TicketType: Decodable {
+class TicketType: Decodable, DataElement {
     /// Ticket Price in cents
     var price: Int
     var contingent: Int
@@ -17,6 +17,14 @@ class TicketType: Decodable {
     var payment: Payment
     var available: Int { return contingent - sold }
     
+    var text: String {
+        return description
+    }
+    
+    func getCellIdentifier() -> String {
+        return "TicketTypeCell"
+    }
+
     enum CodingKeys: String, CodingKey {
         case price = "price"
         case contingent = "contingent"
