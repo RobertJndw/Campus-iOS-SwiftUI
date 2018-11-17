@@ -148,6 +148,10 @@
 		227B480920A3428100AE3373 /* TuitionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 227B480720A3428100AE3373 /* TuitionCollectionViewCell.xib */; };
 		227B481720A3472C00AE3373 /* TUMCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B481620A3472C00AE3373 /* TUMCollectionViewCell.swift */; };
 		227B481920A3487700AE3373 /* DataSourceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B481820A3487700AE3373 /* DataSourceCollectionViewCell.swift */; };
+		227BB0BE219FC7A500DBBE8D /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227BB0BD219FC7A500DBBE8D /* EventsTableViewController.swift */; };
+		227BB0C6219FCAB500DBBE8D /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227BB0C5219FCAB500DBBE8D /* Events.storyboard */; };
+		227BB0C9219FCAC700DBBE8D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */; };
+		227BB0CC21A01CB700DBBE8D /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227BB0CB21A01CB700DBBE8D /* Ticket.swift */; };
 		227D214E20988B3600C651BB /* ComposedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227D214D20988B3600C651BB /* ComposedDataSource.swift */; };
 		227D215020988B4400C651BB /* NewsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227D214F20988B4400C651BB /* NewsDataSource.swift */; };
 		227D215220988B5300C651BB /* CafeteriaDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227D215120988B5300C651BB /* CafeteriaDataSource.swift */; };
@@ -396,6 +400,10 @@
 		227B480720A3428100AE3373 /* TuitionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TuitionCollectionViewCell.xib; sourceTree = "<group>"; };
 		227B481620A3472C00AE3373 /* TUMCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUMCollectionViewCell.swift; sourceTree = "<group>"; };
 		227B481820A3487700AE3373 /* DataSourceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceCollectionViewCell.swift; sourceTree = "<group>"; };
+		227BB0BD219FC7A500DBBE8D /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		227BB0C5219FCAB500DBBE8D /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
+		227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		227BB0CB21A01CB700DBBE8D /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		227D214D20988B3600C651BB /* ComposedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedDataSource.swift; sourceTree = "<group>"; };
 		227D214F20988B4400C651BB /* NewsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataSource.swift; sourceTree = "<group>"; };
 		227D215120988B5300C651BB /* CafeteriaDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaDataSource.swift; sourceTree = "<group>"; };
@@ -586,6 +594,8 @@
 				0E3B21421C13C0590035ED70 /* NavigationController */,
 				0E5A61E21C135E1E006017DB /* Setup Wizard */,
 				0E5A61E31C135E27006017DB /* Card View */,
+				227BB0BC219FC78200DBBE8D /* Events Detail View */,
+				227BB0BB219FC75800DBBE8D /* Event View */,
 				0E60CD491C148ED700B29948 /* Movie Detail View */,
 				0E5725461C1656DF00E5471D /* Tuition Detail View */,
 				0E5725431C1656B700E5471D /* Calendar Detail View */,
@@ -709,6 +719,7 @@
 				22F4B6B31EA802960086D49A /* BookRental.swift */,
 				0ECD97121F9D8EC70070441D /* DefaultCampus.swift */,
 				2259BBA0219F4D8F00FECFFD /* Event.swift */,
+				227BB0CB21A01CB700DBBE8D /* Ticket.swift */,
 				807C48131F40918500CAD35D /* MVV */,
 				0E64AC681C0DFAD400060FB0 /* Managers */,
 				0E6F114D1FA27D1E00DB01EB /* SearchResultKey.swift */,
@@ -916,6 +927,23 @@
 				22763FDB20B217C9008D5A89 /* CardTableViewCell.swift */,
 			);
 			path = Cards;
+			sourceTree = "<group>";
+		};
+		227BB0BB219FC75800DBBE8D /* Event View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Event View";
+			sourceTree = "<group>";
+		};
+		227BB0BC219FC78200DBBE8D /* Events Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				227BB0BD219FC7A500DBBE8D /* EventsTableViewController.swift */,
+				227BB0C5219FCAB500DBBE8D /* Events.storyboard */,
+				227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */,
+			);
+			path = "Events Detail View";
 			sourceTree = "<group>";
 		};
 		227D214C20988B0C00C651BB /* DataSources */ = {
@@ -1286,6 +1314,7 @@
 				0E424F4E1BE16DBE00B5DFCB /* Main.storyboard in Resources */,
 				50200E201DF4980700B6FBE3 /* Lecture.storyboard in Resources */,
 				50200E161DF4967700B6FBE3 /* Calendar Detail.storyboard in Resources */,
+				227BB0C6219FCAB500DBBE8D /* Events.storyboard in Resources */,
 				0EC28AE51E05549300FF1E40 /* EditCards.storyboard in Resources */,
 				50200E0E1DF493BF00B6FBE3 /* Tution.storyboard in Resources */,
 				22763FCF20ADBE65008D5A89 /* NewsSpreadCollectionViewCell.xib in Resources */,
@@ -1448,11 +1477,13 @@
 				0E1073B11C1A4BE2004C93CF /* Room.swift in Sources */,
 				0EF4CEF01D416751001649F1 /* DetailView.swift in Sources */,
 				0EC9D0201FBA514500061DF1 /* SourceNewsManager.swift in Sources */,
+				227BB0CC21A01CB700DBBE8D /* Ticket.swift in Sources */,
 				22763FCB20ADBA21008D5A89 /* NewsSpreadDataSource.swift in Sources */,
 				9D77671120D033F800F9A4FD /* UITextViewNoStartInset.swift in Sources */,
 				0EAB3B951F9D76280074FB1E /* MVGAPI.swift in Sources */,
 				0E6F114E1FA27D1E00DB01EB /* SearchResultKey.swift in Sources */,
 				0E5DF1E31C14748F000F47D1 /* TumStyleConstants.swift in Sources */,
+				227BB0BE219FC7A500DBBE8D /* EventsTableViewController.swift in Sources */,
 				0E424F4B1BE16DBE00B5DFCB /* CardViewController.swift in Sources */,
 				0EC28AE21E05523C00FF1E40 /* CardKey.swift in Sources */,
 				0E3B212B1C13AB250035ED70 /* DoneHUD.swift in Sources */,
@@ -1514,6 +1545,7 @@
 				0E52817D1C0E306200762EA3 /* DataElement.swift in Sources */,
 				227D2160209B345C00C651BB /* CafeteriaCollectionViewCell.swift in Sources */,
 				0E4825AF1C2CAEC500C756A5 /* DetailPersonWithTitleCell.swift in Sources */,
+				227BB0C9219FCAC700DBBE8D /* EventTableViewCell.swift in Sources */,
 				9DE0FD5B20E808DB009B75F9 /* ColumnsFlowLayoutDelegate.swift in Sources */,
 				0EF3D5051FBB13A900D05DE0 /* RefreshableTableViewController.swift in Sources */,
 				220EFF9F20A85BB9009D0337 /* GradesDataSource.swift in Sources */,

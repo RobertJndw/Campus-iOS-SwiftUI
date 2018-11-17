@@ -10,6 +10,7 @@ import UIKit
 
 class Event: DataElement, Decodable {
     
+    var eventID: Int
     var news: String
     var kino: String
     var image: UIImage?
@@ -21,6 +22,7 @@ class Event: DataElement, Decodable {
     var start: Date
     var end: Date
     var group: String?
+    var ticket: Ticket?
     
     func getCellIdentifier() -> String {
         return "EventCell"
@@ -41,6 +43,7 @@ class Event: DataElement, Decodable {
         case start = "start"
         case end = "end"
         case group = "ticket_group"
+        case event = "event"
     }
     
     required init(from decoder: Decoder) throws {
@@ -48,6 +51,11 @@ class Event: DataElement, Decodable {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         let container = try decoder.container(keyedBy: CodingKeys.self)
+        let eventString = try container.decode(String.self, forKey: .event)
+        guard let eventID = Int(eventString) else {
+            throw DecodingError.dataCorruptedError(forKey: .event, in: container, debugDescription: "Error parsing event")
+        }
+        self.eventID = eventID
         self.news = try container.decode(String.self, forKey: .news)
         self.kino = try container.decode(String.self, forKey: .kino)
         let fileURLString = try container.decode(String.self, forKey: .file).replacingOccurrences(of: " ", with: "%20")

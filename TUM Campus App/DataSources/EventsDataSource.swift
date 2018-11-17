@@ -54,5 +54,15 @@ class EventsDataSource: NSObject, TUMDataSource, TUMInteractiveDataSource {
         return cell
     }
     
+    @objc func onShowMore() {
+        let storyboard = UIStoryboard(name: "Events", bundle: nil)
+        if let destination = storyboard.instantiateInitialViewController() as? EventsTableViewController {
+            destination.delegate = parent
+            destination.values = events
+            destination.navigationTitle = "Events"
+            parent.navigationController?.pushViewController(destination, animated: true)
+        }
+    }
+    
 
 }
