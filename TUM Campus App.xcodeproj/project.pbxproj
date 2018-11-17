@@ -133,6 +133,7 @@
 		221E45C020A4C21F00A92084 /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221E45BF20A4C21F00A92084 /* MenuDataSource.swift */; };
 		221E45C320A71A7300A92084 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221E45C120A71A7300A92084 /* MenuCollectionViewCell.swift */; };
 		221E45C420A71A7300A92084 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221E45C220A71A7300A92084 /* MenuCollectionViewCell.xib */; };
+		222CF25E21A0A9460096EEC6 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CF25D21A0A9460096EEC6 /* EventCollectionViewCell.swift */; };
 		222E86151FBDDB44009AAFBA /* TUMLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222E86141FBDDB44009AAFBA /* TUMLogoView.swift */; };
 		2259BB9F219F4CA400FECFFD /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259BB9E219F4CA400FECFFD /* EventManager.swift */; };
 		2259BBA1219F4D8F00FECFFD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259BBA0219F4D8F00FECFFD /* Event.swift */; };
@@ -151,7 +152,6 @@
 		227BB0BE219FC7A500DBBE8D /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227BB0BD219FC7A500DBBE8D /* EventsTableViewController.swift */; };
 		227BB0C6219FCAB500DBBE8D /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227BB0C5219FCAB500DBBE8D /* Events.storyboard */; };
 		227BB0C9219FCAC700DBBE8D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */; };
-		227BB0CC21A01CB700DBBE8D /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227BB0CB21A01CB700DBBE8D /* Ticket.swift */; };
 		227D214E20988B3600C651BB /* ComposedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227D214D20988B3600C651BB /* ComposedDataSource.swift */; };
 		227D215020988B4400C651BB /* NewsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227D214F20988B4400C651BB /* NewsDataSource.swift */; };
 		227D215220988B5300C651BB /* CafeteriaDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227D215120988B5300C651BB /* CafeteriaDataSource.swift */; };
@@ -175,6 +175,7 @@
 		22ACC1E620E54363003A0243 /* TUMPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ACC1E520E54363003A0243 /* TUMPickerController.swift */; };
 		22C83C6620A9DDEF00AB556D /* MVGStationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C83C6420A9DDEF00AB556D /* MVGStationCollectionViewCell.swift */; };
 		22C83C6720A9DDEF00AB556D /* MVGStationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C83C6520A9DDEF00AB556D /* MVGStationCollectionViewCell.xib */; };
+		22CBF05C21A0920F004FC569 /* TicketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CBF05B21A0920F004FC569 /* TicketType.swift */; };
 		22F4B6B21EA802350086D49A /* BookRentalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B6B11EA802350086D49A /* BookRentalManager.swift */; };
 		22F4B6B41EA802960086D49A /* BookRental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4B6B31EA802960086D49A /* BookRental.swift */; };
 		301195E91E464A6A0012B133 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301195E81E464A6A0012B133 /* Grade.swift */; };
@@ -384,6 +385,8 @@
 		221E45BF20A4C21F00A92084 /* MenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
 		221E45C120A71A7300A92084 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		221E45C220A71A7300A92084 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		222CF25C21A0A9460096EEC6 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventCollectionViewCell.xib; path = "/Users/tim/Developer/iOS/TUM Campus App/CardCells/EventCollectionViewCell.xib"; sourceTree = "<absolute>"; };
+		222CF25D21A0A9460096EEC6 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventCollectionViewCell.swift; path = "/Users/tim/Developer/iOS/TUM Campus App/CardCells/EventCollectionViewCell.swift"; sourceTree = "<absolute>"; };
 		222E86141FBDDB44009AAFBA /* TUMLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUMLogoView.swift; sourceTree = "<group>"; };
 		222F90F91EB7BD69002F9289 /* Campus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Campus.entitlements; sourceTree = "<group>"; };
 		2259BB9E219F4CA400FECFFD /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
@@ -403,7 +406,6 @@
 		227BB0BD219FC7A500DBBE8D /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		227BB0C5219FCAB500DBBE8D /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
-		227BB0CB21A01CB700DBBE8D /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		227D214D20988B3600C651BB /* ComposedDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedDataSource.swift; sourceTree = "<group>"; };
 		227D214F20988B4400C651BB /* NewsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataSource.swift; sourceTree = "<group>"; };
 		227D215120988B5300C651BB /* CafeteriaDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaDataSource.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 		22ACC1E520E54363003A0243 /* TUMPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUMPickerController.swift; sourceTree = "<group>"; };
 		22C83C6420A9DDEF00AB556D /* MVGStationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVGStationCollectionViewCell.swift; sourceTree = "<group>"; };
 		22C83C6520A9DDEF00AB556D /* MVGStationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVGStationCollectionViewCell.xib; sourceTree = "<group>"; };
+		22CBF05B21A0920F004FC569 /* TicketType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketType.swift; sourceTree = "<group>"; };
 		22F4B6B11EA802350086D49A /* BookRentalManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookRentalManager.swift; sourceTree = "<group>"; };
 		22F4B6B31EA802960086D49A /* BookRental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookRental.swift; sourceTree = "<group>"; };
 		24903A680C6A8A498F797A7C /* Pods_Campus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Campus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -692,6 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				0E1ACAB7201A278300D68F5D /* AccountType.swift */,
+				22CBF05B21A0920F004FC569 /* TicketType.swift */,
 				0EC28ADD1E053F7900FF1E40 /* CardOrder.swift */,
 				0E0C68291E8A4DCD007001F1 /* SexyEntry.swift */,
 				0EEBD10D1E058E5F00798B41 /* EmptyCard.swift */,
@@ -719,7 +723,6 @@
 				22F4B6B31EA802960086D49A /* BookRental.swift */,
 				0ECD97121F9D8EC70070441D /* DefaultCampus.swift */,
 				2259BBA0219F4D8F00FECFFD /* Event.swift */,
-				227BB0CB21A01CB700DBBE8D /* Ticket.swift */,
 				807C48131F40918500CAD35D /* MVV */,
 				0E64AC681C0DFAD400060FB0 /* Managers */,
 				0E6F114D1FA27D1E00DB01EB /* SearchResultKey.swift */,
@@ -970,6 +973,8 @@
 		227D215D209920E700C651BB /* CardCells */ = {
 			isa = PBXGroup;
 			children = (
+				222CF25D21A0A9460096EEC6 /* EventCollectionViewCell.swift */,
+				222CF25C21A0A9460096EEC6 /* EventCollectionViewCell.xib */,
 				227D2159209920DE00C651BB /* NewsCollectionViewCell.swift */,
 				227D215A209920DE00C651BB /* NewsCollectionViewCell.xib */,
 				22763FCC20ADBE65008D5A89 /* NewsSpreadCollectionViewCell.swift */,
@@ -1470,6 +1475,8 @@
 				0E692BB81C162CD200266417 /* CalendarViewController.swift in Sources */,
 				0EB473D01C1B4F0F00F17F44 /* Map.swift in Sources */,
 				0EB473CE1C1B4A9500F17F44 /* RoomFinderViewController.swift in Sources */,
+				22CBF05C21A0920F004FC569 /* TicketType.swift in Sources */,
+				222CF25E21A0A9460096EEC6 /* EventCollectionViewCell.swift in Sources */,
 				0E6B534C1EA449F0002B5058 /* SexyEntryTableViewCell.swift in Sources */,
 				807C48171F4091E300CAD35D /* Station.swift in Sources */,
 				0EB161881C1A0EB2001A08FC /* LectureTableViewCell.swift in Sources */,
@@ -1477,7 +1484,6 @@
 				0E1073B11C1A4BE2004C93CF /* Room.swift in Sources */,
 				0EF4CEF01D416751001649F1 /* DetailView.swift in Sources */,
 				0EC9D0201FBA514500061DF1 /* SourceNewsManager.swift in Sources */,
-				227BB0CC21A01CB700DBBE8D /* Ticket.swift in Sources */,
 				22763FCB20ADBA21008D5A89 /* NewsSpreadDataSource.swift in Sources */,
 				9D77671120D033F800F9A4FD /* UITextViewNoStartInset.swift in Sources */,
 				0EAB3B951F9D76280074FB1E /* MVGAPI.swift in Sources */,

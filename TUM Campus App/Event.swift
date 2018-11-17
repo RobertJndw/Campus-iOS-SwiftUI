@@ -22,7 +22,7 @@ class Event: DataElement, Decodable {
     var start: Date
     var end: Date
     var group: String?
-    var ticket: Ticket?
+    var ticketTypes: [TicketType] = []
     
     func getCellIdentifier() -> String {
         return "EventCell"

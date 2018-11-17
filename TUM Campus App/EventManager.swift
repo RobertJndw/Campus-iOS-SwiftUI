@@ -25,8 +25,8 @@ final class EventManager: SingleItemManager, CardManager {
         let promise: Promise<[Event], APIError> = config.tumCabe.doDecodableRequest(to: .eventList)
         return promise.flatMap { (events: [Event]) -> Promise<[Event], APIError> in
             return events.compactMap { (event: Event) -> Promise<Event, APIError> in
-                return self.config.tumCabe.doDecodableRequest(to: .ticketStats, arguments: ["event" : event.eventID]).map { (ticket: Ticket) -> Event in
-                    event.ticket = ticket
+                return self.config.tumCabe.doDecodableRequest(to: .ticketTypes, arguments: ["event" : event.eventID]).map { (ticketTypes: [TicketType]) -> Event in
+                    event.ticketTypes = ticketTypes
                     return event
                     }
             }.bulk

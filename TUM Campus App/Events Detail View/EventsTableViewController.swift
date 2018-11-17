@@ -63,12 +63,10 @@ class EventsTableViewController: RefreshableTableViewController<Event>, DetailVi
         let event = values[indexPath.row]
         cell.eventImageView.image = event.image ?? UIImage(named: "movie")
         cell.titleLabel.text = event.title
-        if let ticket = event.ticket {
-            let availableTickets = ticket.contingent - ticket.sold
-            cell.availableTicketsLabel.text = "\(availableTickets) available"
-        } else {
-            cell.availableTicketsLabel.text = "n/a available"
-        }
+        
+        let availableTickets = event.ticketTypes.reduce(0) { count,ticketType in count + ticketType.available }
+        cell.availableTicketsLabel.text = "\(availableTickets) available"
+        
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.timeStyle = .short
