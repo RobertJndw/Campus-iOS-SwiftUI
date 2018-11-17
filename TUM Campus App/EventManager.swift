@@ -15,18 +15,13 @@ final class EventManager: SingleItemManager, CardManager {
     var requiresLogin: Bool = true
     var cardKey: CardKey = .event
     var config: Config
-    lazy var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-        return dateFormatter
-    }()
     
     init(config: Config) {
         self.config = config
     }
     
     func fetch() -> Promise<[Event], APIError> {
-        return config.tumCabe.doDecodableRequest(to: .eventList, dateDecodingStrategy: JSONDecoder.DateDecodingStrategy.formatted(dateFormatter))
+        return config.tumCabe.doDecodableRequest(to: .eventList)
     }
 
 }

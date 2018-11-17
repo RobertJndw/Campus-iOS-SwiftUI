@@ -6,19 +6,20 @@
 //  Copyright © 2018 LS1 TUM. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Event: DataElement, Decodable {
     
     var news: String
     var kino: String
-    var file: String
+    var image: UIImage?
+    var file: URL
     var title: String
     var description: String
     var locality: String
-    var link: String
-    var start: String
-    var end: String
+    var link: URL
+    var start: Date
+    var end: Date
     var group: String?
     
     func getCellIdentifier() -> String {
@@ -26,7 +27,7 @@ class Event: DataElement, Decodable {
     }
     
     var text: String {
-        return ""
+        return self.title
     }
     
     enum CodingKeys: String, CodingKey {
@@ -42,18 +43,39 @@ class Event: DataElement, Decodable {
         case group = "ticket_group"
     }
     
-    init(decoder: Decoder) throws {
+    required init(from decoder: Decoder) throws {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.news = try container.decode(String.self, forKey: .news)
         self.kino = try container.decode(String.self, forKey: .kino)
-        self.file = try container.decode(String.self, forKey: .file)
+        let fileURLString = try container.decode(String.self, forKey: .file).replacingOccurrences(of: " ", with: "%20")
+        guard let file = URL(string: fileURLString) else {
+            throw DecodingError.dataCorruptedError(forKey: .link, in: container, debugDescription: "Error parsing file url")
+        }
+        self.file = file
+        let imageData = try? Data(contentsOf: file)
+        self.image = UIImage(data: imageData ?? Data())
         self.title = try container.decode(String.self, forKey: .title)
         self.description = try container.decode(String.self, forKey: .description)
         self.locality = try container.decode(String.self, forKey: .locality)
-        self.link = try container.decode(String.self, forKey: .link)
-        self.start = try container.decode(String.self, forKey: .start)
-        self.end = try container.decode(String.self, forKey: .end)
-        self.group = try container.decode(String.self, forKey: .group)
+        let linkURLString = try container.decode(String.self, forKey: .link).replacingOccurrences(of: " ", with: "%20")
+        guard let link = URL(string: linkURLString) else {
+            throw DecodingError.dataCorruptedError(forKey: .link, in: container, debugDescription: "Error parsing link url")
+        }
+        self.link = link
+        let startString = try container.decode(String.self, forKey: .start)
+        guard let start = dateFormatter.date(from: startString) else {
+            throw DecodingError.dataCorruptedError(forKey: .start, in: container, debugDescription: "Error parsing start date")
+        }
+        self.start = start
+        let endString = try container.decode(String.self, forKey: .end)
+        guard let end = dateFormatter.date(from: endString) else {
+            throw DecodingError.dataCorruptedError(forKey: .end, in: container, debugDescription: "Error parsing end date")
+        }
+        self.end = end
+        self.group = try? container.decode(String.self, forKey: .group)
     }
     
 }

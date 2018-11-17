@@ -49,6 +49,7 @@ class EventsDataSource: NSObject, TUMDataSource, TUMInteractiveDataSource {
         cell.typeLabel.text = "TU FILM"
         cell.titleLabel.text = event.title
         cell.descriptionLable.text = event.description
+        cell.imageView.image = event.image ?? UIImage(named: "movie")
         
         return cell
     }
