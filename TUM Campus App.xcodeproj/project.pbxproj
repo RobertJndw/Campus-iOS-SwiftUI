@@ -174,6 +174,7 @@
 		2297958A1EAC228E004A7F9B /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 229795891EAC228E004A7F9B /* KeychainWrapper.m */; };
 		2297958C1EACB858004A7F9B /* LibrarySettingsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2297958B1EACB858004A7F9B /* LibrarySettingsView.storyboard */; };
 		22A92C2F1F9CE512005F4407 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A92C2E1F9CE512005F4407 /* SearchResultsController.swift */; };
+		22AC882421A0CB9800BF90AE /* TicketTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AC882321A0CB9800BF90AE /* TicketTypeCell.swift */; };
 		22ACC1E620E54363003A0243 /* TUMPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ACC1E520E54363003A0243 /* TUMPickerController.swift */; };
 		22C83C6620A9DDEF00AB556D /* MVGStationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C83C6420A9DDEF00AB556D /* MVGStationCollectionViewCell.swift */; };
 		22C83C6720A9DDEF00AB556D /* MVGStationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C83C6520A9DDEF00AB556D /* MVGStationCollectionViewCell.xib */; };
@@ -431,6 +432,7 @@
 		229795891EAC228E004A7F9B /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		2297958B1EACB858004A7F9B /* LibrarySettingsView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LibrarySettingsView.storyboard; sourceTree = "<group>"; };
 		22A92C2E1F9CE512005F4407 /* SearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
+		22AC882321A0CB9800BF90AE /* TicketTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTypeCell.swift; sourceTree = "<group>"; };
 		22ACC1E520E54363003A0243 /* TUMPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUMPickerController.swift; sourceTree = "<group>"; };
 		22C83C6420A9DDEF00AB556D /* MVGStationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVGStationCollectionViewCell.swift; sourceTree = "<group>"; };
 		22C83C6520A9DDEF00AB556D /* MVGStationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVGStationCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -939,8 +941,8 @@
 		227BB0BB219FC75800DBBE8D /* Event View */ = {
 			isa = PBXGroup;
 			children = (
-				227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */,
 				222CF25F21A0A9850096EEC6 /* EventTableViewController.swift */,
+				22AC882321A0CB9800BF90AE /* TicketTypeCell.swift */,
 				222CF26121A0A9930096EEC6 /* Event.storyboard */,
 			);
 			path = "Event View";
@@ -950,6 +952,7 @@
 			isa = PBXGroup;
 			children = (
 				227BB0BD219FC7A500DBBE8D /* EventsTableViewController.swift */,
+				227BB0C7219FCAC700DBBE8D /* EventTableViewCell.swift */,
 				227BB0C5219FCAB500DBBE8D /* Events.storyboard */,
 			);
 			path = "Events Detail View";
@@ -1587,6 +1590,7 @@
 				0EC10C271C1738420024F902 /* PersonSearchManager.swift in Sources */,
 				807C48111F40917E00CAD35D /* MVGManager.swift in Sources */,
 				228DEAFA20DB0DDB00934F72 /* ErrorView.swift in Sources */,
+				22AC882421A0CB9800BF90AE /* TicketTypeCell.swift in Sources */,
 				0EC479CC1FBA6EEC00FC36EB /* NewsSource.swift in Sources */,
 				5007C6A61E068AA60014B065 /* StudyRoomGroup.swift in Sources */,
 				048B08FE21760B770028348E /* DepartureView.swift in Sources */,

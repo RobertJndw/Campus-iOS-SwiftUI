@@ -75,9 +75,4 @@ class EventsTableViewController: RefreshableTableViewController<Event>, DetailVi
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        values[indexPath.row].open(sender: self)
-    }
-    
-    
 }

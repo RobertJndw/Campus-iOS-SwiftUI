@@ -58,7 +58,6 @@ class EventsDataSource: NSObject, TUMDataSource, TUMInteractiveDataSource {
         let storyboard = UIStoryboard(name: "Event", bundle: nil)
         if let destination = storyboard.instantiateInitialViewController() as? EventTableViewController {
             destination.event = event
-            destination.delegate = parent
             parent.navigationController?.pushViewController(destination, animated: true)
         }
     }
