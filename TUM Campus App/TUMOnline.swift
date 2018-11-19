@@ -21,6 +21,7 @@ enum TUMOnlineEndpoint: String, APIEndpoint {
     case lectureSearch = "wbservicesbasic.veranstaltungenSuche"
     case lectureDetails = "wbservicesbasic.veranstaltungenDetails"
     case identify = "wbservicesbasic.id"
+    case secretUpload = "wbservicesbasic.secretUpload"
 }
 
 final class TUMOnlineAPI: API {
