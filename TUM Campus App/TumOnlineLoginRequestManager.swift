@@ -8,6 +8,8 @@
 
 import Sweeft
 import SWXMLHash
+import Foundation
+import Security
 
 class TumOnlineLoginRequestManager {
     
@@ -69,9 +71,53 @@ class TumOnlineLoginRequestManager {
             return xml["confirmed"].element?.text == "true"
         }.onSuccess { success in
             if success {
+                try? self.uploadSecret(token: token)
                 self.loginSuccesful()
+            } else {
+                self.logOut()
             }
         }
+    }
+    
+    private func uploadSecret(token: String) throws -> Response<Bool> {
+        let tag = "de.tum.campusapp.keys.secret".data(using: .utf8)!
+        let attributes: [String: Any] = [kSecAttrKeyType as String: kSecAttrKeyTypeRSA, kSecAttrKeySizeInBits as String: 1024, kSecPrivateKeyAttrs as String: [kSecAttrIsPermanent as String: true, kSecAttrApplicationTag as String: tag]]
+        
+        var error: Unmanaged<CFError>?
+        guard let privateKey = SecKeyCreateRandomKey(attributes as CFDictionary, &error) else {
+            return .errored(with: .cannotPerformRequest)
+        }
+        
+        guard let publicKey = SecKeyCopyPublicKey(privateKey) else {
+            return .errored(with: .cannotPerformRequest)
+        }
+        
+        guard let data: Data = SecKeyCopyExternalRepresentation(publicKey, &error) as Data? else {
+            return .errored(with: .cannotPerformRequest)
+        }
+        
+        let algorithm: SecKeyAlgorithm = .rsaSignatureMessagePKCS1v15SHA1
+        
+        let date = Date().description
+        let salt = Int.random(in: Int.min...Int.max).description
+        let device = UIDevice.current.description
+        
+        let message = "\(date)\(salt)\(device)"
+        
+        guard let signature = SecKeyCreateSignature(privateKey, algorithm, message.data! as CFData, &error) as Data? else {
+            return .errored(with: .cannotPerformRequest)
+        }
+        
+        let result: Promise<Bool, APIError> = config.tumOnline.doRepresentedRequest(to: .secretUpload, queries: ["pToken" : token, "pSecret" : data.base64EncodedString()]).map { (xml: XMLIndexer) in
+            return xml["confirmed"].element?.text == "true"
+        }
+        let jsonBody = ["signature": signature.base64EncodedString(), "date": date, "rand": salt, "device": device, "publicKey": data.base64EncodedString()].json
+        
+        let result2: Promise<Bool, APIError> = config.tumCabe.doJSONRequest(with: .post, to: .registerDevice, arguments: [ : ], body: jsonBody).map { (json: JSON) in
+                return true
+        }
+        
+        return result
     }
     
     private func start(id: String) -> Response<Bool> {

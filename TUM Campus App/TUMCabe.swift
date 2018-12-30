@@ -10,6 +10,7 @@ import UIKit
 import Sweeft
 
 enum TUMCabeEndpoint: String, APIEndpoint {
+    case registerDevice = "device/register/{publicKey}"
     case movie = "kino/"
     case eventList = "event/list/"
     case myEvnents = "event/ticket/my/"
