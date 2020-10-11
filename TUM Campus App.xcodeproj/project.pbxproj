@@ -149,6 +149,11 @@
 		22F962A0246193C3004BF215 /* MealPlanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F9629F246193C3004BF215 /* MealPlanTableViewController.swift */; };
 		22FFED5F247BDC1600BCA27C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFED5E247BDC1600BCA27C /* MapViewController.swift */; };
 		22FFED61247BF47100BCA27C /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FFED60247BF47100BCA27C /* IconButton.swift */; };
+		FDA0EE0D2533BFBB0048874C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA0EE0C2533BFBB0048874C /* WidgetKit.framework */; platformFilter = ios; };
+		FDA0EE0F2533BFBB0048874C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA0EE0E2533BFBB0048874C /* SwiftUI.framework */; };
+		FDA0EE122533BFBB0048874C /* TUM_Calendar_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA0EE112533BFBB0048874C /* TUM_Calendar_Widget.swift */; };
+		FDA0EE142533BFBE0048874C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA0EE132533BFBE0048874C /* Assets.xcassets */; };
+		FDA0EE182533BFBE0048874C /* TUM Calendar WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FDA0EE0B2533BFBB0048874C /* TUM Calendar WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,7 +171,28 @@
 			remoteGlobalIDString = 2277E90B21D93C3300D7FF3F;
 			remoteInfo = "TUM Campus App";
 		};
+		FDA0EE162533BFBE0048874C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2277E90421D93C3300D7FF3F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDA0EE0A2533BFBB0048874C;
+			remoteInfo = "TUM Calendar WidgetExtension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDA0EE1A2533BFBE0048874C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FDA0EE182533BFBE0048874C /* TUM Calendar WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		19382F1D2389CA5F007BEC88 /* StudyRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomTableViewController.swift; sourceTree = "<group>"; };
@@ -321,6 +347,13 @@
 		22F9629F246193C3004BF215 /* MealPlanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlanTableViewController.swift; sourceTree = "<group>"; };
 		22FFED5E247BDC1600BCA27C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		22FFED60247BF47100BCA27C /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		FDA0EE0B2533BFBB0048874C /* TUM Calendar WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TUM Calendar WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA0EE0C2533BFBB0048874C /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FDA0EE0E2533BFBB0048874C /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FDA0EE112533BFBB0048874C /* TUM_Calendar_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUM_Calendar_Widget.swift; sourceTree = "<group>"; };
+		FDA0EE132533BFBE0048874C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDA0EE152533BFBE0048874C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA0EE192533BFBE0048874C /* TUM Calendar WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TUM Calendar WidgetExtension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +399,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA0EE082533BFBB0048874C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA0EE0F2533BFBB0048874C /* SwiftUI.framework in Frameworks */,
+				FDA0EE0D2533BFBB0048874C /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,10 +516,12 @@
 		2277E90321D93C3300D7FF3F = {
 			isa = PBXGroup;
 			children = (
+				FDA0EE192533BFBE0048874C /* TUM Calendar WidgetExtension.entitlements */,
 				2277E90E21D93C3300D7FF3F /* TUM Campus App */,
 				22A57A2824B9438F0062B791 /* TUM Campus App.xctestplan */,
 				2277E92621D93C3400D7FF3F /* TUM Campus AppTests */,
 				2277E93121D93C3400D7FF3F /* TUM Campus AppUITests */,
+				FDA0EE102533BFBB0048874C /* TUM Calendar Widget */,
 				2277E90D21D93C3300D7FF3F /* Products */,
 				22E67CC2248AE69D0066682D /* Frameworks */,
 			);
@@ -489,6 +533,7 @@
 				2277E90C21D93C3300D7FF3F /* TUMCampusApp.app */,
 				2277E92321D93C3400D7FF3F /* TUMCampusAppTests.xctest */,
 				2277E92E21D93C3400D7FF3F /* TUMCampusAppUITests.xctest */,
+				FDA0EE0B2533BFBB0048874C /* TUM Calendar WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -753,8 +798,20 @@
 			isa = PBXGroup;
 			children = (
 				22E67CDD248AEA010066682D /* libsqlite3.tbd */,
+				FDA0EE0C2533BFBB0048874C /* WidgetKit.framework */,
+				FDA0EE0E2533BFBB0048874C /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDA0EE102533BFBB0048874C /* TUM Calendar Widget */ = {
+			isa = PBXGroup;
+			children = (
+				FDA0EE112533BFBB0048874C /* TUM_Calendar_Widget.swift */,
+				FDA0EE132533BFBE0048874C /* Assets.xcassets */,
+				FDA0EE152533BFBE0048874C /* Info.plist */,
+			);
+			path = "TUM Calendar Widget";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -767,10 +824,12 @@
 				2277E90821D93C3300D7FF3F /* Sources */,
 				2277E90921D93C3300D7FF3F /* Frameworks */,
 				2277E90A21D93C3300D7FF3F /* Resources */,
+				FDA0EE1A2533BFBE0048874C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FDA0EE172533BFBE0048874C /* PBXTargetDependency */,
 			);
 			name = TUMCampusApp;
 			packageProductDependencies = (
@@ -822,13 +881,30 @@
 			productReference = 2277E92E21D93C3400D7FF3F /* TUMCampusAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		FDA0EE0A2533BFBB0048874C /* TUM Calendar WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDA0EE1D2533BFBE0048874C /* Build configuration list for PBXNativeTarget "TUM Calendar WidgetExtension" */;
+			buildPhases = (
+				FDA0EE072533BFBB0048874C /* Sources */,
+				FDA0EE082533BFBB0048874C /* Frameworks */,
+				FDA0EE092533BFBB0048874C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TUM Calendar WidgetExtension";
+			productName = "TUM Calendar WidgetExtension";
+			productReference = FDA0EE0B2533BFBB0048874C /* TUM Calendar WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2277E90421D93C3300D7FF3F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = TUM;
 				TargetAttributes = {
@@ -847,6 +923,9 @@
 					2277E92D21D93C3400D7FF3F = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 2277E90B21D93C3300D7FF3F;
+					};
+					FDA0EE0A2533BFBB0048874C = {
+						CreatedOnToolsVersion = 12.0.1;
 					};
 				};
 			};
@@ -876,6 +955,7 @@
 				2277E90B21D93C3300D7FF3F /* TUMCampusApp */,
 				2277E92221D93C3400D7FF3F /* TUMCampusAppTests */,
 				2277E92D21D93C3400D7FF3F /* TUMCampusAppUITests */,
+				FDA0EE0A2533BFBB0048874C /* TUM Calendar WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -917,6 +997,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA0EE092533BFBB0048874C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA0EE142533BFBE0048874C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,6 +1132,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDA0EE072533BFBB0048874C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA0EE122533BFBB0048874C /* TUM_Calendar_Widget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1056,6 +1152,11 @@
 			isa = PBXTargetDependency;
 			target = 2277E90B21D93C3300D7FF3F /* TUMCampusApp */;
 			targetProxy = 2277E92F21D93C3400D7FF3F /* PBXContainerItemProxy */;
+		};
+		FDA0EE172533BFBE0048874C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDA0EE0A2533BFBB0048874C /* TUM Calendar WidgetExtension */;
+			targetProxy = FDA0EE162533BFBE0048874C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1239,6 +1340,7 @@
 		2277E93821D93C3400D7FF3F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "TUM Campus App/TUM Campus App.entitlements";
@@ -1274,6 +1376,7 @@
 		2277E93921D93C3400D7FF3F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "TUM Campus App/TUM Campus App.entitlements";
@@ -1388,6 +1491,58 @@
 			};
 			name = Release;
 		};
+		FDA0EE1B2533BFBE0048874C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "TUM Calendar WidgetExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQ83GZ8GRK;
+				INFOPLIST_FILE = "TUM Calendar Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.tum.campusapp.TUM-Calendar-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDA0EE1C2533BFBE0048874C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "TUM Calendar WidgetExtension.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LQ83GZ8GRK;
+				INFOPLIST_FILE = "TUM Calendar Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "de.tum.campusapp.TUM-Calendar-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1423,6 +1578,15 @@
 			buildConfigurations = (
 				2277E93E21D93C3400D7FF3F /* Debug */,
 				2277E93F21D93C3400D7FF3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDA0EE1D2533BFBE0048874C /* Build configuration list for PBXNativeTarget "TUM Calendar WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDA0EE1B2533BFBE0048874C /* Debug */,
+				FDA0EE1C2533BFBE0048874C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
